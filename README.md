@@ -15,7 +15,7 @@ Descargar [PGADMIN3](https://www.pgadmin.org/download/pgadmin-3-windows/) es un 
 Una vez terminado los pasos anteriores debemos ir al la raíz de nustro proyecto y clonar el archivo *.env.example*
 Una vez clonado debemos ejecutar los siguientes comando de docker: 
 1. ``docker-compose build`` Realiza las configuraciones al entorno de trabajo
-2. ``docker-compose run java mvn build`` Permite instalar las dependencias de maven
+2. ``docker-compose run java mvn install`` Permite instalar las dependencias de maven
 3. ``docker-compose up --build`` Construye el resto de las configuraciones como migraciones de bases de datos y corridas procesos automáticos
 4. Si has instalado el contenedor de docker en 
     - windows 10 home, entonces deberas entrar a la siguiente direccion: http://192.168.99.100:8080/
@@ -30,8 +30,8 @@ Listo! ya tu entorno esta accesible desde la URL
 ![](./img/postgres.png)
 
 
-### Build
-Ejecutar el siguiente comando en la raiz del directorio:
+### Build opcional
+Ejecutar el siguiente comando en la raiz del directorio si quieres trabajar con el IDE, pero recuerda que debes doquenizar tu entorno de desarrollo en IDEA (preferiblemente):
 ```
 mvn clean install
 ```
