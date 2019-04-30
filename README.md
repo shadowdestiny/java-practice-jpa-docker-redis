@@ -15,9 +15,8 @@ Descargar [PGADMIN3](https://www.pgadmin.org/download/pgadmin-3-windows/) es un 
 Una vez terminado los pasos anteriores debemos ir al la raíz de nustro proyecto y clonar el archivo *.env.example*
 Una vez clonado debemos ejecutar los siguientes comando de docker: 
 1. ``docker-compose build`` Realiza las configuraciones al entorno de trabajo
-2. ``docker-compose run java mvn install`` Permite instalar las dependencias de maven
-3. ``docker-compose up --build`` Construye el resto de las configuraciones como migraciones de bases de datos y corridas procesos automáticos
-4. Si has instalado el contenedor de docker en 
+2. ``docker-compose up --build`` Construye el resto de las configuraciones como migraciones de bases de datos y corridas procesos automáticos
+3. Si has instalado el contenedor de docker en 
     - windows 10 home, entonces deberas entrar a la siguiente direccion: http://192.168.99.100:8080/
     - windows 10 pro hyper-v deberas ir a la direccion http://localhost:8080
     - linux en las direcciones ips que se encuentran en el archivo .env http://121.9.9.3 sin puerto o con el puerto 8080
@@ -36,7 +35,7 @@ Ejecutar el siguiente comando en la raiz del directorio si quieres trabajar con 
 mvn clean install
 ```
 
-### Iniciando el servicio
+### Iniciando el servicio, una vez ejecutes el comando docker-compose up --build o docker-compose up debes esperar que se inicien los servicios: redis, postgres, maven y por ultimo spring, debiendo de mostrar el siguiente log luego de 60 segundos.
 
 ```
 
